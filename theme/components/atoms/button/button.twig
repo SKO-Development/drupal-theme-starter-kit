@@ -1,0 +1,17 @@
+{% set variant = variant|default('primary') %}
+
+{% set classes = [
+  'site-button',
+  'site-button--' ~ variant,
+] %}
+
+<a
+  href="{{ url }}"
+  class="{{ classes|join(' ') }}"
+  {% if new_window %}
+    target="_blank"
+    rel="noopener noreferrer"
+  {% endif %}
+>
+  {{ text }}
+</a>

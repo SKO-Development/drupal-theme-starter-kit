@@ -1,0 +1,21 @@
+/**
+ * Global styles shared across the theme.
+ *
+ * Component-specific styles should live inside each SDC directory.
+ */
+
+:root {
+  --content-width: 75rem;
+  --focus-colour: #005ea8;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:focus-visible {
+  outline: 3px solid var(--focus-colour);
+  outline-offset: 3px;
+}

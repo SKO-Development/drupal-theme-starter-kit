@@ -1,0 +1,30 @@
+name: Button
+description: An accessible link presented visually as a button.
+status: stable
+
+props:
+  type: object
+  required:
+    - text
+    - url
+  properties:
+    text:
+      type: string
+      title: Button text
+
+    url:
+      type: string
+      title: Destination URL
+
+    variant:
+      type: string
+      title: Visual variant
+      enum:
+        - primary
+        - secondary
+      default: primary
+
+    new_window:
+      type: boolean
+      title: Open in a new window
+      default: false

@@ -1,0 +1,35 @@
+.site-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.75rem;
+  padding: 0.625rem 1.25rem;
+  border: 2px solid transparent;
+  border-radius: 0.25rem;
+  font-weight: 700;
+  line-height: 1.25;
+  text-decoration: none;
+}
+
+.site-button--primary {
+  color: #fff;
+  background: #005ea8;
+  border-color: #005ea8;
+}
+
+.site-button--primary:hover {
+  color: #fff;
+  background: #004578;
+  border-color: #004578;
+}
+
+.site-button--secondary {
+  color: #005ea8;
+  background: #fff;
+  border-color: #005ea8;
+}
+
+.site-button--secondary:hover {
+  color: #fff;
+  background: #005ea8;
+}
