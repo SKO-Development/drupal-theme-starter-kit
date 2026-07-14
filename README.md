@@ -1,4 +1,4 @@
-# Drupal SDC Theme Template
+# Drupal Starter Theme Template
 
 A reusable Drupal frontend theme starter built around:
 

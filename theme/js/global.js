@@ -1,11 +1,10 @@
 (function (Drupal, once) {
   'use strict';
 
-  Drupal.behaviors.drupalSdcTheme = {
+  Drupal.behaviors.starterTheme = {
     attach(context) {
-      once('drupal-sdc-theme', 'html', context).forEach(() => {
-        // Global behaviours belong here.
-        // Component-specific JavaScript should remain inside each SDC.
+      once('starter-theme', 'html', context).forEach(() => {
+        // Global theme behaviours belong here.
       });
     },
   };
