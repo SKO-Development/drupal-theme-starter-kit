@@ -1,4 +1,4 @@
-name: Drupal SDC Theme
+name: Starter Theme
 type: theme
 description: 'Reusable Drupal theme starter using Single Directory Components and Storybook.'
 package: Custom
@@ -6,7 +6,7 @@ core_version_requirement: ^11
 base theme: bootstrap5
 
 libraries:
-  - drupal_sdc_theme/global
+  - starter_theme/global
 
 regions:
   header: Header
