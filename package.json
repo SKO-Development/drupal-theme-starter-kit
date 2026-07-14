@@ -1,0 +1,18 @@
+{
+  "name": "drupal-sdc-starter",
+  "version": "0.1.0",
+  "description": "Reusable Drupal starter theme using Single Directory Components, Storybook and Bootstrap.",
+  "private": true,
+  "author": "Taylor Spaven",
+  "license": "MIT",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "lint": "npm run lint:scss && npm run lint:js",
+    "lint:scss": "stylelint \"theme/**/*.scss\"",
+    "lint:js": "eslint theme/**/*.js"
+  }
+}
