@@ -1,12 +1,31 @@
-/**
- * Global styles shared across the theme.
- *
- * Component-specific styles should live inside each SDC directory.
- */
-
 :root {
+  --colour-primary: #005ea8;
+  --colour-primary-dark: #004578;
+  --colour-secondary: #5f259f;
+  --colour-text: #242424;
+  --colour-background: #ffffff;
+  --colour-border: #e5e5e5;
+  --colour-focus: #ffbf47;
+  --colour-link: #005ea8;
+  --colour-link-hover: #004578;
+  --colour-error: #b10e1e;
+  --colour-success: #00703c;
+  --colour-warning: #f47738;
+  --font-family-base: Arial, Helvetica, sans-serif;
+  --font-family-heading: Arial, Helvetica, sans-serif;
+  --font-size-base: 1rem;
+  --line-height-base: 1.5;
+  --line-height-heading: 1.2;
+  --spacing-1: 0.25rem;
+  --spacing-2: 0.5rem;
+  --spacing-3: 0.75rem;
+  --spacing-4: 1rem;
+  --spacing-5: 1.5rem;
+  --spacing-6: 2rem;
+  --spacing-7: 3rem;
+  --spacing-8: 4rem;
   --content-width: 75rem;
-  --focus-colour: #005ea8;
+  --content-gutter: 1.25rem;
 }
 
 *,
@@ -15,7 +34,74 @@
   box-sizing: border-box;
 }
 
-:focus-visible {
-  outline: 3px solid var(--focus-colour);
-  outline-offset: 3px;
+html {
+  text-size-adjust: 100%;
 }
+
+body {
+  margin: 0;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+body {
+  color: var(--colour-text);
+  background: var(--colour-background);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-block: 0 0.75em;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+p {
+  margin-block: 0 1rem;
+}
+
+a {
+  color: var(--colour-link);
+  text-decoration-thickness: 0.0625rem;
+  text-underline-offset: 0.15em;
+}
+
+a:hover {
+  color: var(--colour-link-hover);
+  text-decoration-thickness: 0.125rem;
+}
+
+:focus {
+  outline: none;
+}
+
+:focus-visible {
+  outline: 0.1875rem solid var(--colour-focus);
+  outline-offset: 0.1875rem;
+}
+
+.site-container {
+  width: min(100% - var(--content-gutter) * 2, var(--content-width));
+  margin-inline: auto;
+}
+
+/*# sourceMappingURL=global.css.map */

@@ -1,0 +1,7 @@
+.site-container {
+  width: min(
+    calc(100% - (var(--content-gutter) * 2)),
+    var(--content-width)
+  );
+  margin-inline: auto;
+}
