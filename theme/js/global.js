@@ -1,9 +1,9 @@
 (function (Drupal, once) {
   'use strict';
 
-  Drupal.behaviors.starterTheme = {
+  Drupal.behaviors.starter_theme = {
     attach(context) {
-      once('starter-theme', 'html', context).forEach(() => {
+      once('starter_theme', 'html', context).forEach(() => {
         // Global theme behaviours belong here.
       });
     },
