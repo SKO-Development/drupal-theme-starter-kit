@@ -1,0 +1,10 @@
+{
+  "name": "sko-development/drupal-theme-starter-kit",
+  "description": "Reusable Drupal Bootstrap base theme using Single Directory Components and Storybook.",
+  "type": "drupal-custom-theme",
+  "license": "proprietary",
+  "require": {
+    "drupal/core": "^11",
+    "drupal/bootstrap5": "*"
+  }
+}
