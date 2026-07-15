@@ -1,0 +1,41 @@
+@use '../abstracts/colours' as colours;
+@use '../abstracts/spacing' as spacing;
+@use '../abstracts/typography' as typography;
+@use '../abstracts/breakpoints' as layout;
+
+:root {
+  // Colours.
+  --colour-primary: #{colours.$colour-primary};
+  --colour-primary-dark: #{colours.$colour-primary-dark};
+  --colour-secondary: #{colours.$colour-secondary};
+  --colour-text: #{colours.$colour-text};
+  --colour-background: #{colours.$colour-background};
+  --colour-border: #{colours.$colour-border};
+  --colour-focus: #{colours.$colour-focus};
+  --colour-link: #{colours.$colour-link};
+  --colour-link-hover: #{colours.$colour-link-hover};
+  --colour-error: #{colours.$colour-error};
+  --colour-success: #{colours.$colour-success};
+  --colour-warning: #{colours.$colour-warning};
+
+  // Typography.
+  --font-family-base: #{typography.$font-family-base};
+  --font-family-heading: #{typography.$font-family-heading};
+  --font-size-base: #{typography.$font-size-base};
+  --line-height-base: #{typography.$line-height-base};
+  --line-height-heading: #{typography.$line-height-heading};
+
+  // Spacing.
+  --spacing-1: #{spacing.$spacing-1};
+  --spacing-2: #{spacing.$spacing-2};
+  --spacing-3: #{spacing.$spacing-3};
+  --spacing-4: #{spacing.$spacing-4};
+  --spacing-5: #{spacing.$spacing-5};
+  --spacing-6: #{spacing.$spacing-6};
+  --spacing-7: #{spacing.$spacing-7};
+  --spacing-8: #{spacing.$spacing-8};
+
+  // Layout.
+  --content-width: #{layout.$content-width};
+  --content-gutter: #{layout.$content-gutter};
+}

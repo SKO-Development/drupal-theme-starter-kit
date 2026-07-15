@@ -1,0 +1,25 @@
+@use '../abstracts/typography' as type;
+
+body {
+  color: var(--colour-text);
+  background: var(--colour-background);
+  font-family: type.$font-family-base;
+  font-size: type.$font-size-base;
+  line-height: type.$line-height-base;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-block: 0 0.75em;
+  font-family: type.$font-family-heading;
+  font-weight: type.$font-weight-bold;
+  line-height: type.$line-height-heading;
+}
+
+p {
+  margin-block: 0 1rem;
+}
