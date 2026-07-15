@@ -13,6 +13,12 @@
     "build-storybook": "storybook build",
     "lint": "npm run lint:scss && npm run lint:js",
     "lint:scss": "stylelint \"theme/**/*.scss\"",
-    "lint:js": "eslint theme/**/*.js"
+    "lint:js": "eslint theme/**/*.js",
+    "css:build": "sass --style=expanded --no-source-map theme/scss/global.scss theme/css/global.css",
+    "css:dev": "sass --style=expanded --source-map theme/scss/global.scss theme/css/global.css",
+    "css:watch": "sass --watch --style=expanded --source-map theme/scss/global.scss:theme/css/global.css"
+  },
+  "devDependencies": {
+    "sass": "^1.101.0"
   }
 }

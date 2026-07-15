@@ -1,0 +1,10 @@
+a {
+  color: var(--colour-link);
+  text-decoration-thickness: 0.0625rem;
+  text-underline-offset: 0.15em;
+}
+
+a:hover {
+  color: var(--colour-link-hover);
+  text-decoration-thickness: 0.125rem;
+}

@@ -3,33 +3,34 @@
   align-items: center;
   justify-content: center;
   min-height: 2.75rem;
-  padding: 0.625rem 1.25rem;
-  border: 2px solid transparent;
+  padding: var(--spacing-2) var(--spacing-5);
+  border: 0.125rem solid transparent;
   border-radius: 0.25rem;
   font-weight: 700;
   line-height: 1.25;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .site-button--primary {
   color: #fff;
-  background: #005ea8;
-  border-color: #005ea8;
+  background: var(--colour-primary);
+  border-color: var(--colour-primary);
 }
 
 .site-button--primary:hover {
   color: #fff;
-  background: #004578;
-  border-color: #004578;
+  background: var(--colour-primary-dark);
+  border-color: var(--colour-primary-dark);
 }
 
 .site-button--secondary {
-  color: #005ea8;
+  color: var(--colour-primary);
   background: #fff;
-  border-color: #005ea8;
+  border-color: var(--colour-primary);
 }
 
 .site-button--secondary:hover {
   color: #fff;
-  background: #005ea8;
+  background: var(--colour-primary);
 }
