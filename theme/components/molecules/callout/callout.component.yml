@@ -1,0 +1,67 @@
+name: Callout
+description: 'Highlights important information with an optional action button.'
+status: stable
+
+props:
+  type: object
+  required:
+    - title
+  properties:
+    title:
+      type: string
+      title: Title
+      description: 'The callout heading.'
+
+    heading_level:
+      type: integer
+      title: Heading level
+      description: 'HTML heading level used for the title.'
+      enum:
+        - 2
+        - 3
+        - 4
+      default: 2
+
+    variant:
+      type: string
+      title: Variant
+      description: 'Controls the visual and semantic style.'
+      enum:
+        - information
+        - success
+        - warning
+        - error
+      default: information
+
+    button:
+      type:
+        - object
+        - 'null'
+      title: Button
+      description: 'Optional action rendered using the Button SDC.'
+      properties:
+        text:
+          type: string
+          title: Button text
+
+        url:
+          type: string
+          title: Button URL
+
+        variant:
+          type: string
+          title: Button variant
+          enum:
+            - primary
+            - secondary
+          default: primary
+
+        new_window:
+          type: boolean
+          title: Open in a new window
+          default: false
+
+slots:
+  content:
+    title: Content
+    description: 'The main callout content.'

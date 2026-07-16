@@ -109,5 +109,3 @@ a:hover {
   width: min(100% - var(--content-gutter) * 2, var(--content-width));
   margin-inline: auto;
 }
-
-/*# sourceMappingURL=global.css.map */
