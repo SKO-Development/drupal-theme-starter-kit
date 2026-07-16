@@ -17,6 +17,12 @@
   --colour-error: #{colours.$colour-error};
   --colour-success: #{colours.$colour-success};
   --colour-warning: #{colours.$colour-warning};
+  --colour-white: #{colours.$colour-white};
+--colour-black: #{colours.$colour-black};
+--colour-grey-100: #{colours.$colour-grey-100};
+--colour-grey-200: #{colours.$colour-grey-200};
+--colour-grey-500: #{colours.$colour-grey-500};
+--colour-grey-800: #{colours.$colour-grey-800};
 
   // Typography.
   --font-family-base: #{typography.$font-family-base};

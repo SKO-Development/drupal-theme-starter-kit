@@ -1,0 +1,44 @@
+.callout {
+  --callout-accent: var(--colour-primary);
+  --callout-background: var(--colour-grey-100);
+
+  padding: var(--spacing-5);
+  border-inline-start: 0.375rem solid var(--callout-accent);
+  background: var(--callout-background);
+}
+
+.callout--information {
+  --callout-accent: var(--colour-primary);
+  --callout-background: var(--colour-grey-100);
+}
+
+.callout--success {
+  --callout-accent: var(--colour-success);
+  --callout-background: #eaf7ef;
+}
+
+.callout--warning {
+  --callout-accent: var(--colour-warning);
+  --callout-background: #fff4e5;
+}
+
+.callout--error {
+  --callout-accent: var(--colour-error);
+  --callout-background: #fbeaec;
+}
+
+.callout__content {
+  max-width: 50rem;
+}
+
+.callout__title {
+  margin-block: 0 var(--spacing-3);
+}
+
+.callout__body > :last-child {
+  margin-bottom: 0;
+}
+
+.callout__action {
+  margin-top: var(--spacing-5);
+}
