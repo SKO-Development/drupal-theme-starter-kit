@@ -1,0 +1,34 @@
+{% set variant = variant|default('information') %}
+{% set heading_level = heading_level|default(2) %}
+
+{% set classes = [
+  'callout',
+  'callout--' ~ variant,
+] %}
+
+<aside class="{{ classes|join(' ') }}">
+  <div class="callout__content">
+    <h{{ heading_level }} class="callout__title">
+      {{ title }}
+    </h{{ heading_level }}>
+
+    {% if content %}
+      <div class="callout__body">
+        {% block content %}
+          {{ content }}
+        {% endblock %}
+      </div>
+    {% endif %}
+
+    {% if button and button.text and button.url %}
+      <div class="callout__action">
+        {% include 'starter_theme:button' with {
+          text: button.text,
+          url: button.url,
+          variant: button.variant|default('primary'),
+          new_window: button.new_window|default(false)
+        } only %}
+      </div>
+    {% endif %}
+  </div>
+</aside>
