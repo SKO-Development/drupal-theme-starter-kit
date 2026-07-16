@@ -11,6 +11,9 @@ export default {
   tags: ['autodocs'],
 
   parameters: {
+    a11y: {
+      test: 'error',
+    },
     docs: {
       description: {
         component:

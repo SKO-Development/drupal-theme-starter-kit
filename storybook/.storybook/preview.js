@@ -32,6 +32,27 @@ const preview = {
         },
       ],
     },
+
+    a11y: {
+      config: {
+        rules: [],
+      },
+
+      options: {
+        runOnly: {
+          type: 'tag',
+          values: [
+            'wcag2a',
+            'wcag2aa',
+            'wcag21a',
+            'wcag21aa',
+            'wcag22aa',
+          ],
+        },
+      },
+
+      test: 'error',
+    },
   },
 };
 
