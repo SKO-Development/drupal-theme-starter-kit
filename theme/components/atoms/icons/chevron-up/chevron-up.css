@@ -1,0 +1,123 @@
+.icon {
+  --icon-size: 1.5rem;
+  --icon-container-size: var(--icon-size);
+
+  --icon-colour: currentColor;
+  --icon-hover-colour: var(--icon-colour);
+
+  --icon-background: transparent;
+  --icon-hover-background: var(--icon-background);
+
+  --icon-border-colour: transparent;
+  --icon-hover-border-colour: var(--icon-border-colour);
+
+  --icon-border-width: 0;
+  --icon-border-radius: 0;
+
+  display: inline-flex;
+  width: var(--icon-container-size);
+  height: var(--icon-container-size);
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+
+  color: var(--icon-colour);
+  background-color: var(--icon-background);
+  border: var(--icon-border-width) solid var(--icon-border-colour);
+  border-radius: var(--icon-border-radius);
+
+  line-height: 1;
+  vertical-align: middle;
+
+  transition:
+    color 150ms ease,
+    background-color 150ms ease,
+    border-color 150ms ease;
+}
+
+.icon__svg {
+  display: block;
+  width: var(--icon-size);
+  height: var(--icon-size);
+  fill: none;
+  stroke: currentColor;
+}
+
+/* Sizes */
+
+.icon--size-small {
+  --icon-size: 1rem;
+}
+
+.icon--size-medium {
+  --icon-size: 1.5rem;
+}
+
+.icon--size-large {
+  --icon-size: 2rem;
+}
+
+.icon--size-extra-large {
+  --icon-size: 3rem;
+}
+
+/* Shapes */
+
+.icon--shape-circle,
+.icon--shape-square,
+.icon--shape-rounded {
+  --icon-container-size: calc(var(--icon-size) + 1rem);
+}
+
+.icon--shape-circle {
+  --icon-border-radius: 50%;
+}
+
+.icon--shape-square {
+  --icon-border-radius: 0;
+}
+
+.icon--shape-rounded {
+  --icon-border-radius: 0.5rem;
+}
+
+/* Border widths */
+
+.icon--border-none {
+  --icon-border-width: 0;
+}
+
+.icon--border-thin {
+  --icon-border-width: 1px;
+}
+
+.icon--border-medium {
+  --icon-border-width: 2px;
+}
+
+.icon--border-thick {
+  --icon-border-width: 4px;
+}
+
+/* Hover states */
+
+.icon:hover,
+a:hover .icon,
+button:hover .icon {
+  color: var(--icon-hover-colour);
+  background-color: var(--icon-hover-background);
+  border-color: var(--icon-hover-border-colour);
+}
+
+a:focus-visible .icon,
+button:focus-visible .icon {
+  color: var(--icon-hover-colour);
+  background-color: var(--icon-hover-background);
+  border-color: var(--icon-hover-border-colour);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .icon {
+    transition: none;
+  }
+}

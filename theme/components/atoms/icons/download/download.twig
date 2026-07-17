@@ -1,0 +1,57 @@
+{% set icon_size = size|default('medium') %}
+{% set icon_shape = shape|default('none') %}
+{% set icon_border_width = border_width|default('none') %}
+{% set is_decorative = decorative is not defined ? true : decorative %}
+
+{% set icon_classes = [
+  'icon',
+  'icon--download',
+  'icon--size-' ~ icon_size,
+  'icon--shape-' ~ icon_shape,
+  'icon--border-' ~ icon_border_width,
+  additional_classes|default(null),
+] %}
+
+{% set icon_styles = [
+  icon_colour
+    ? '--icon-colour: ' ~ icon_colour,
+  background_colour
+    ? '--icon-background: ' ~ background_colour,
+  border_colour
+    ? '--icon-border-colour: ' ~ border_colour,
+  hover_icon_colour
+    ? '--icon-hover-colour: ' ~ hover_icon_colour,
+  hover_background_colour
+    ? '--icon-hover-background: ' ~ hover_background_colour,
+  hover_border_colour
+    ? '--icon-hover-border-colour: ' ~ hover_border_colour,
+] %}
+
+<span
+  class="{{ icon_classes|filter(value => value)|join(' ') }}"
+  {% if icon_styles|filter(value => value)|length %}
+    style="{{ icon_styles|filter(value => value)|join('; ') }}"
+  {% endif %}
+  {% if is_decorative %}
+    aria-hidden="true"
+  {% elseif label %}
+    role="img"
+    aria-label="{{ label }}"
+  {% endif %}
+>
+  <svg
+    class="icon__svg"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    focusable="false"
+    aria-hidden="true"
+  >
+    <path d="M12 3v12" />
+    <path d="m7 10 5 5 5-5" />
+    <path d="M5 21h14" />
+  </svg>
+</span>
