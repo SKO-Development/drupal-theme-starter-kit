@@ -1,0 +1,96 @@
+'$schema': 'https://git.drupalcode.org/project/drupal/-/raw/11.x/core/assets/schemas/v1/metadata.schema.json'
+
+name: Menu
+
+status: experimental
+
+description: >
+  Displays a menu icon with configurable size, container shape,
+  colours, borders and hover states.
+
+props:
+  type: object
+
+  properties:
+    size:
+      type: string
+      title: Size
+      enum:
+        - small
+        - medium
+        - large
+        - extra-large
+      default: medium
+
+    shape:
+      type: string
+      title: Shape
+      enum:
+        - none
+        - circle
+        - square
+        - rounded
+      default: none
+
+    border_width:
+      type: string
+      title: Border width
+      enum:
+        - none
+        - thin
+        - medium
+        - thick
+      default: none
+
+    icon_colour:
+      type:
+        - string
+        - 'null'
+      title: Icon colour
+
+    background_colour:
+      type:
+        - string
+        - 'null'
+      title: Background colour
+
+    border_colour:
+      type:
+        - string
+        - 'null'
+      title: Border colour
+
+    hover_icon_colour:
+      type:
+        - string
+        - 'null'
+      title: Hover icon colour
+
+    hover_background_colour:
+      type:
+        - string
+        - 'null'
+      title: Hover background colour
+
+    hover_border_colour:
+      type:
+        - string
+        - 'null'
+      title: Hover border colour
+
+    decorative:
+      type: boolean
+      title: Decorative
+      default: true
+
+    label:
+      type:
+        - string
+        - 'null'
+      title: Accessible label
+
+    additional_classes:
+      type:
+        - string
+        - 'null'
+      title: Additional classes
