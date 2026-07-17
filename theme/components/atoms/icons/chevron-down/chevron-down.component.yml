@@ -1,0 +1,87 @@
+'$schema': 'https://git.drupalcode.org/project/drupal/-/raw/11.x/core/assets/schemas/v1/metadata.schema.json'
+
+name: Chevron down
+
+status: experimental
+
+description: >
+  Displays a downward-pointing chevron icon with configurable size,
+  container shape, colours, borders and hover states.
+
+props:
+  type: object
+
+  properties:
+    size:
+      type: string
+      title: Size
+      enum:
+        - small
+        - medium
+        - large
+        - extra-large
+      default: medium
+
+    shape:
+      type: string
+      title: Shape
+      enum:
+        - none
+        - circle
+        - square
+        - rounded
+      default: none
+
+    border_width:
+      type: string
+      title: Border width
+      enum:
+        - none
+        - thin
+        - medium
+        - thick
+      default: none
+
+    icon_colour:
+      type:
+        - string
+        - 'null'
+
+    background_colour:
+      type:
+        - string
+        - 'null'
+
+    border_colour:
+      type:
+        - string
+        - 'null'
+
+    hover_icon_colour:
+      type:
+        - string
+        - 'null'
+
+    hover_background_colour:
+      type:
+        - string
+        - 'null'
+
+    hover_border_colour:
+      type:
+        - string
+        - 'null'
+
+    decorative:
+      type: boolean
+      default: true
+
+    label:
+      type:
+        - string
+        - 'null'
+
+    additional_classes:
+      type:
+        - string
+        - 'null'
