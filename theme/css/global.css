@@ -32,6 +32,118 @@
   --spacing-8: 4rem;
   --content-width: 75rem;
   --content-gutter: 1.25rem;
+  --shadow-none: none;
+  --shadow-small:
+    0 1px 2px rgb(0 0 0 / 8%),
+    0 1px 3px rgb(0 0 0 / 6%);
+  --shadow-medium:
+    0 4px 8px rgb(0 0 0 / 10%),
+    0 2px 4px rgb(0 0 0 / 8%);
+  --shadow-large:
+    0 10px 24px rgb(0 0 0 / 14%),
+    0 4px 8px rgb(0 0 0 / 8%);
+  --shadow-extra-large:
+    0 20px 40px rgb(0 0 0 / 18%),
+    0 8px 16px rgb(0 0 0 / 10%);
+  --border-width-none: 0;
+  --border-width-thin: 1px;
+  --border-width-medium: 2px;
+  --border-width-thick: 4px;
+  --border-style-solid: solid;
+  --border-style-dashed: dashed;
+  --border-style-dotted: dotted;
+  --border-radius-none: 0;
+  --border-radius-small: 0.25rem;
+  --border-radius-medium: 0.5rem;
+  --border-radius-large: 1rem;
+  --border-radius-extra-large: 1.5rem;
+  --border-radius-round: 50%;
+  --border-radius-pill: 9999px;
+  --motion-duration-instant: 0ms;
+  --motion-duration-fast: 150ms;
+  --motion-duration-medium: 250ms;
+  --motion-duration-slow: 400ms;
+  --motion-easing-linear: linear;
+  --motion-easing-standard: ease;
+  --motion-easing-enter: ease-out;
+  --motion-easing-exit: ease-in;
+  --motion-transition-fast:
+    var(--motion-duration-fast)
+    var(--motion-easing-standard);
+  --motion-transition-medium:
+    var(--motion-duration-medium)
+    var(--motion-easing-standard);
+  --motion-transition-slow:
+    var(--motion-duration-slow)
+    var(--motion-easing-standard);
+  --motion-transition-enter:
+    var(--motion-duration-medium)
+    var(--motion-easing-enter);
+  --motion-transition-exit:
+    var(--motion-duration-medium)
+    var(--motion-easing-exit);
+  --motion-distance-small: 0.25rem;
+  --motion-distance-medium: 0.75rem;
+  --motion-distance-large: 1.5rem;
+  --motion-scale-small: 0.96;
+  --motion-scale-standard: 1;
+  --motion-scale-large: 1.08;
+  --motion-rotation-quarter: 90deg;
+  --motion-rotation-half: 180deg;
+  --layout-container-small: 40rem;
+  --layout-container-medium: 64rem;
+  --layout-container-large: 75rem;
+  --layout-container-full: 100%;
+  --layout-padding-small: 1rem;
+  --layout-padding-medium: 1.5rem;
+  --layout-padding-large: 2rem;
+  --layout-grid-columns: 12;
+  --layout-grid-gap-small: 1rem;
+  --layout-grid-gap-medium: 1.5rem;
+  --layout-grid-gap-large: 2rem;
+  --layout-content-narrow: 40rem;
+  --layout-content-standard: 48rem;
+  --layout-content-wide: 64rem;
+  --layout-sidebar-small: 14rem;
+  --layout-sidebar-medium: 18rem;
+  --layout-sidebar-large: 22rem;
+  --breakpoint-small: 36rem;
+  --breakpoint-medium: 48rem;
+  --breakpoint-large: 64rem;
+  --breakpoint-extra-large: 75rem;
+  --responsive-content-minimum: 20rem;
+  --responsive-touch-target-minimum: 2.75rem;
+  --accessibility-target-minimum: 2.75rem;
+  --accessibility-target-spacing: 0.5rem;
+  --accessibility-content-minimum: 20rem;
+  --accessibility-readable-line-length: 70ch;
+  --accessibility-contrast-text: 4.5;
+  --accessibility-contrast-large-text: 3;
+  --accessibility-contrast-interface: 3;
+  --accessibility-line-height: 1.5;
+  --accessibility-paragraph-spacing: 2em;
+  --accessibility-letter-spacing: 0.12em;
+  --accessibility-word-spacing: 0.16em;
+  --accessibility-visually-hidden-size: 1px;
+  --focus-colour: var(--colour-focus);
+  --focus-width: var(--border-width-medium);
+  --focus-offset: var(--border-width-medium);
+  --focus-style: solid;
+  --focus-ring:
+    var(--focus-width)
+    var(--focus-style)
+    var(--focus-colour);
+  --focus-ring-inset:
+    inset 0 0 0
+    var(--focus-width)
+    var(--focus-colour);
+      --z-index-base: 0;
+  --z-index-raised: 10;
+  --z-index-sticky: 100;
+  --z-index-dropdown: 200;
+  --z-index-overlay: 300;
+  --z-index-modal: 400;
+  --z-index-toast: 500;
 }
 
 *,
