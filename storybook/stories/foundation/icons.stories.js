@@ -1,5 +1,5 @@
 import './foundation.css';
-import './icons.css';
+import '../../styles/foundation/icons.css';
 
 import arrowRightIcon from '../../../theme/components/atoms/icons/arrow-right/arrow-right.svg?raw';
 import checkIcon from '../../../theme/components/atoms/icons/check/check.svg?raw';
