@@ -1,0 +1,567 @@
+.storybook-motion {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem;
+  color: var(--colour-text);
+  font-family: var(--font-family-base);
+}
+
+.storybook-motion__intro {
+  max-width: 760px;
+  margin-bottom: 3rem;
+}
+
+.storybook-motion__intro h1 {
+  margin: 0 0 1rem;
+  font-size: 2.5rem;
+  line-height: 1.15;
+}
+
+.storybook-motion__intro p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+.storybook-motion__section {
+  margin-top: 4rem;
+}
+
+.storybook-motion__section-heading {
+  margin: 0 0 0.75rem;
+  font-size: 1.75rem;
+}
+
+.storybook-motion__section-description {
+  max-width: 760px;
+  margin: 0 0 2rem;
+  line-height: 1.6;
+}
+
+.storybook-motion__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+}
+
+.storybook-motion__patterns-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+}
+
+.storybook-motion__item {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.storybook-motion__sample {
+  display: flex;
+  min-height: 150px;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 1.5rem;
+  border: var(--border-width-thin) solid var(--colour-border);
+  border-radius: var(--border-radius-medium);
+  background: var(--colour-white);
+  cursor: pointer;
+}
+
+.storybook-motion__sample:focus-visible {
+  outline: var(--border-width-medium) solid var(--colour-primary);
+  outline-offset: var(--border-width-medium);
+}
+
+.storybook-motion__demo {
+  display: flex;
+  width: 3rem;
+  height: 3rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--border-radius-small);
+  background: var(--colour-primary);
+  color: var(--colour-white);
+  font-weight: 700;
+  transform: translateX(calc(var(--motion-distance-large) * -1));
+}
+
+.storybook-motion__sample:hover .storybook-motion__demo,
+.storybook-motion__sample:focus .storybook-motion__demo {
+  transform: translateX(var(--motion-distance-large));
+}
+
+.storybook-motion__demo--instant {
+  transition:
+    transform
+    var(--motion-duration-instant)
+    var(--motion-easing-standard);
+}
+
+.storybook-motion__demo--fast {
+  transition:
+    transform
+    var(--motion-duration-fast)
+    var(--motion-easing-standard);
+}
+
+.storybook-motion__demo--medium {
+  transition:
+    transform
+    var(--motion-duration-medium)
+    var(--motion-easing-standard);
+}
+
+.storybook-motion__demo--slow {
+  transition:
+    transform
+    var(--motion-duration-slow)
+    var(--motion-easing-standard);
+}
+
+.storybook-motion__demo--linear {
+  transition:
+    transform
+    var(--motion-duration-slow)
+    var(--motion-easing-linear);
+}
+
+.storybook-motion__demo--standard {
+  transition:
+    transform
+    var(--motion-duration-slow)
+    var(--motion-easing-standard);
+}
+
+.storybook-motion__demo--enter {
+  transition:
+    transform
+    var(--motion-duration-slow)
+    var(--motion-easing-enter);
+}
+
+.storybook-motion__demo--exit {
+  transition:
+    transform
+    var(--motion-duration-slow)
+    var(--motion-easing-exit);
+}
+
+.storybook-motion__details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.storybook-motion__name {
+  margin: 0;
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
+.storybook-motion__token {
+  display: inline-block;
+  width: fit-content;
+  padding: 0.25rem 0.5rem;
+  border-radius: var(--border-radius-small);
+  background: var(--colour-grey-100);
+  color: var(--colour-text);
+  font-family: monospace;
+  font-size: 0.875rem;
+}
+
+.storybook-motion__value,
+.storybook-motion__usage {
+  margin: 0;
+  color: var(--colour-grey-800);
+  line-height: 1.5;
+}
+
+.storybook-motion__hint {
+  margin: 0;
+  color: var(--colour-grey-800);
+  font-size: 0.875rem;
+}
+
+/* Common motion pattern previews */
+
+.storybook-motion__pattern-sample {
+  display: flex;
+  min-height: 180px;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 2rem;
+  border: var(--border-width-thin) solid var(--colour-border);
+  border-radius: var(--border-radius-medium);
+  background: var(--colour-grey-100);
+  cursor: pointer;
+}
+
+.storybook-motion__pattern-sample:focus-visible {
+  outline: var(--border-width-medium) solid var(--colour-primary);
+  outline-offset: var(--border-width-medium);
+}
+
+.storybook-motion__pattern-object {
+  display: flex;
+  min-width: 6rem;
+  min-height: 4rem;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  border: var(--border-width-thin) solid var(--colour-primary);
+  border-radius: var(--border-radius-medium);
+  background: var(--colour-white);
+  color: var(--colour-text);
+  font-weight: 700;
+  text-align: center;
+}
+
+/* 1. Fade in */
+
+.storybook-motion__pattern--fade-in {
+  opacity: 0.25;
+  transition:
+    opacity
+    var(--motion-duration-medium)
+    var(--motion-easing-enter);
+}
+
+.storybook-motion__pattern-sample:hover
+  .storybook-motion__pattern--fade-in,
+.storybook-motion__pattern-sample:focus
+  .storybook-motion__pattern--fade-in {
+  opacity: 1;
+}
+
+/* 2. Fade out */
+
+.storybook-motion__pattern--fade-out {
+  opacity: 1;
+  transition:
+    opacity
+    var(--motion-duration-medium)
+    var(--motion-easing-exit);
+}
+
+.storybook-motion__pattern-sample:hover
+  .storybook-motion__pattern--fade-out,
+.storybook-motion__pattern-sample:focus
+  .storybook-motion__pattern--fade-out {
+  opacity: 0.25;
+}
+
+/* 3. Scale up */
+
+.storybook-motion__pattern--scale-up {
+  transform: scale(var(--motion-scale-standard));
+  transition:
+    transform
+    var(--motion-duration-fast)
+    var(--motion-easing-standard);
+}
+
+.storybook-motion__pattern-sample:hover
+  .storybook-motion__pattern--scale-up,
+.storybook-motion__pattern-sample:focus
+  .storybook-motion__pattern--scale-up {
+  transform: scale(var(--motion-scale-large));
+}
+
+/* 4. Scale down */
+
+.storybook-motion__pattern--scale-down {
+  transform: scale(var(--motion-scale-standard));
+  transition:
+    transform
+    var(--motion-duration-fast)
+    var(--motion-easing-standard);
+}
+
+.storybook-motion__pattern-sample:hover
+  .storybook-motion__pattern--scale-down,
+.storybook-motion__pattern-sample:focus
+  .storybook-motion__pattern--scale-down {
+  transform: scale(var(--motion-scale-small));
+}
+
+/* 5. Slide up */
+
+.storybook-motion__pattern--slide-up {
+  transform: translateY(var(--motion-distance-medium));
+  transition:
+    transform
+    var(--motion-duration-medium)
+    var(--motion-easing-enter);
+}
+
+.storybook-motion__pattern-sample:hover
+  .storybook-motion__pattern--slide-up,
+.storybook-motion__pattern-sample:focus
+  .storybook-motion__pattern--slide-up {
+  transform: translateY(0);
+}
+
+/* 6. Slide down */
+
+.storybook-motion__pattern--slide-down {
+  transform: translateY(calc(var(--motion-distance-medium) * -1));
+  transition:
+    transform
+    var(--motion-duration-medium)
+    var(--motion-easing-enter);
+}
+
+.storybook-motion__pattern-sample:hover
+  .storybook-motion__pattern--slide-down,
+.storybook-motion__pattern-sample:focus
+  .storybook-motion__pattern--slide-down {
+  transform: translateY(0);
+}
+
+/* 7. Slide left */
+
+.storybook-motion__pattern--slide-left {
+  transform: translateX(var(--motion-distance-medium));
+  transition:
+    transform
+    var(--motion-duration-medium)
+    var(--motion-easing-enter);
+}
+
+.storybook-motion__pattern-sample:hover
+  .storybook-motion__pattern--slide-left,
+.storybook-motion__pattern-sample:focus
+  .storybook-motion__pattern--slide-left {
+  transform: translateX(0);
+}
+
+/* 8. Slide right */
+
+.storybook-motion__pattern--slide-right {
+  transform: translateX(calc(var(--motion-distance-medium) * -1));
+  transition:
+    transform
+    var(--motion-duration-medium)
+    var(--motion-easing-enter);
+}
+
+.storybook-motion__pattern-sample:hover
+  .storybook-motion__pattern--slide-right,
+.storybook-motion__pattern-sample:focus
+  .storybook-motion__pattern--slide-right {
+  transform: translateX(0);
+}
+
+/* 9. Rotate */
+
+.storybook-motion__pattern--rotate {
+  transition:
+    transform
+    var(--motion-duration-medium)
+    var(--motion-easing-standard);
+}
+
+.storybook-motion__pattern-sample:hover
+  .storybook-motion__pattern--rotate,
+.storybook-motion__pattern-sample:focus
+  .storybook-motion__pattern--rotate {
+  transform: rotate(var(--motion-rotation-half));
+}
+
+/* 10. Lift */
+
+.storybook-motion__pattern--lift {
+  transition:
+    box-shadow
+    var(--motion-duration-fast)
+    var(--motion-easing-standard),
+    transform
+    var(--motion-duration-fast)
+    var(--motion-easing-standard);
+}
+
+.storybook-motion__pattern-sample:hover
+  .storybook-motion__pattern--lift,
+.storybook-motion__pattern-sample:focus
+  .storybook-motion__pattern--lift {
+  box-shadow: var(--shadow-medium);
+  transform: translateY(calc(var(--motion-distance-small) * -1));
+}
+
+/* 11. Press */
+
+.storybook-motion__pattern--press {
+  box-shadow: var(--shadow-small);
+  transition:
+    box-shadow
+    var(--motion-duration-fast)
+    var(--motion-easing-standard),
+    transform
+    var(--motion-duration-fast)
+    var(--motion-easing-standard);
+}
+
+.storybook-motion__pattern-sample:hover
+  .storybook-motion__pattern--press,
+.storybook-motion__pattern-sample:focus
+  .storybook-motion__pattern--press {
+  box-shadow: var(--shadow-none);
+  transform: translateY(var(--motion-distance-small));
+}
+
+/* 12. Icon grow */
+
+.storybook-motion__pattern--icon-grow {
+  min-width: auto;
+  min-height: auto;
+  border: 0;
+  background: transparent;
+  font-size: 2rem;
+  transform: scale(var(--motion-scale-standard));
+  transition:
+    transform
+    var(--motion-duration-fast)
+    var(--motion-easing-standard);
+}
+
+.storybook-motion__pattern-sample:hover
+  .storybook-motion__pattern--icon-grow,
+.storybook-motion__pattern-sample:focus
+  .storybook-motion__pattern--icon-grow {
+  transform: scale(var(--motion-scale-large));
+}
+
+/* 13. Colour transition */
+
+.storybook-motion__pattern--colour {
+  transition:
+    background-color
+    var(--motion-duration-fast)
+    var(--motion-easing-standard),
+    color
+    var(--motion-duration-fast)
+    var(--motion-easing-standard);
+}
+
+.storybook-motion__pattern-sample:hover
+  .storybook-motion__pattern--colour,
+.storybook-motion__pattern-sample:focus
+  .storybook-motion__pattern--colour {
+  background: var(--colour-primary);
+  color: var(--colour-white);
+}
+
+/* 14. Border transition */
+
+.storybook-motion__pattern--border {
+  transition:
+    border-color
+    var(--motion-duration-fast)
+    var(--motion-easing-standard),
+    border-width
+    var(--motion-duration-fast)
+    var(--motion-easing-standard);
+}
+
+.storybook-motion__pattern-sample:hover
+  .storybook-motion__pattern--border,
+.storybook-motion__pattern-sample:focus
+  .storybook-motion__pattern--border {
+  border-width: var(--border-width-thick);
+  border-color: var(--colour-secondary);
+}
+
+/* 15. Underline reveal */
+
+.storybook-motion__pattern-link {
+  position: relative;
+  padding: 0.5rem 0;
+  color: var(--colour-primary);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.storybook-motion__pattern-link::after {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: var(--border-width-medium);
+  background: var(--colour-primary);
+  content: "";
+  transform: scaleX(0);
+  transform-origin: right;
+  transition:
+    transform
+    var(--motion-duration-fast)
+    var(--motion-easing-standard);
+}
+
+.storybook-motion__pattern-sample:hover
+  .storybook-motion__pattern-link::after,
+.storybook-motion__pattern-sample:focus
+  .storybook-motion__pattern-link::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.storybook-motion__pattern-code {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.storybook-motion__guidance {
+  margin-top: 4rem;
+  padding: 1.5rem;
+  border-left: var(--border-width-thick) solid var(--colour-primary);
+  background: var(--colour-grey-100);
+}
+
+.storybook-motion__guidance h2 {
+  margin-top: 0;
+}
+
+.storybook-motion__guidance ul {
+  margin-bottom: 0;
+  padding-left: 1.5rem;
+}
+
+.storybook-motion__guidance li + li {
+  margin-top: 0.5rem;
+}
+
+.storybook-motion__code {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  overflow-x: auto;
+  border-radius: var(--border-radius-medium);
+  background: var(--colour-grey-800);
+  color: var(--colour-white);
+}
+
+.storybook-motion__code pre {
+  margin: 0;
+  font-family: monospace;
+  white-space: pre-wrap;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .storybook-motion__demo,
+  .storybook-motion__pattern-object,
+  .storybook-motion__pattern-link::after {
+    transition-duration: var(--motion-duration-instant);
+  }
+}
+
+@media (max-width: 600px) {
+  .storybook-motion {
+    padding: 1.5rem;
+  }
+
+  .storybook-motion__intro h1 {
+    font-size: 2rem;
+  }
+}

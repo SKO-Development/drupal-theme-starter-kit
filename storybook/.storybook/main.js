@@ -14,6 +14,7 @@ const config = {
   stories: [
     '../../theme/components/**/*.stories.js',
     '../stories/**/*.stories.js',
+    '../stories/**/*.mdx',
   ],
 
   addons: ['@storybook/addon-docs', '@storybook/addon-a11y'],

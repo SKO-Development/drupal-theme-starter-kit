@@ -9,7 +9,24 @@ const preview = {
     options: {
       storySort: {
         order: [
+          'Welcome',
           'Foundation',
+          [
+            'Colours',
+            'Typography',
+            'Spacing',
+            'Borders and Radius',
+            'Elevation and Shadows',
+            'Animation and Motion',
+            'Grid and Layout',
+            'Breakpoints and Responsive Behaviour',
+            'Accessibility',
+            'Focus Styles',
+            'Z-index and Layering',
+            'Content and Writing Guidance',
+            'Icons',
+            '*',
+          ],
           'Atoms',
           'Molecules',
           'Organisms',
